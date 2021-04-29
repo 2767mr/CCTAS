@@ -10,11 +10,13 @@ const config = {
     entry: './src/main.ts',
     devtool: 'inline-source-map',
     plugins: [
-        new CopyWebpackPlugin([{
-            context: 'assets/',
-            from: '**',
-            to: '[path][name].[ext]'
-        }])
+        new CopyWebpackPlugin({
+            patterns: [{
+                context: 'assets/',
+                from: '**',
+                to: '[path][name].[ext]'
+            }]
+        })
     ],
     module: {
         rules: [{

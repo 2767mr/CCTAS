@@ -16,7 +16,7 @@ export class SavePoint {
     // Even though this field is named timestamp it does not contains a timestamp.
     // Instead it contains the dateCount at the time of the snapshot
     private timestamp!: number;
-    private rngState!: () => seedrandom.prng;
+    private rngState!: object;
     private objects = new Map<any, any>();
     private arrays = new Map<any[], any[]>();
     private canvases = new Map<HTMLCanvasElement, HTMLCanvasElement>();
